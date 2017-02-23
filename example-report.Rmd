@@ -1,0 +1,44 @@
+---
+title: Example Report
+output:
+  html_document:
+    toc: true
+---
+
+```{r, include=FALSE}
+stopifnot(nchar(Sys.getenv('VIRTUAL_ENV')) > 0)
+source(file.path(Sys.getenv('VIRTUAL_ENV'), 'bin', 'rvenv'))
+library(lattice)
+library(latticeExtra)
+library(knitr)
+options(width=100)
+```
+
+# read things
+
+```{r, include=FALSE}
+outdir <- Sys.getenv()['OUTDIR']
+```
+
+
+## project status
+
+```{r}
+cat(outdir)
+```
+
+```{sh}
+pwd
+```
+
+```{sh}
+git --no-pager log -n 1
+```
+
+```{sh}
+git remote -v
+```
+
+```{sh}
+git status
+```
