@@ -58,4 +58,4 @@ if [[ -f r_packages.txt ]]; then
 fi
 
 # bin/install_bioc_packages.R
-bin/install_pandoc.sh --prefix $VIRTUAL_ENV --srcdir src --version 1.19.2
+# bin/install_pandoc.sh --prefix $VIRTUAL_ENV --srcdir src --version 1.19.2
